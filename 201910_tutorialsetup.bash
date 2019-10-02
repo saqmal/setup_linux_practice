@@ -7,7 +7,7 @@ echo "#########################"
 
 set +x 
 
-apt upgrade
+apt update
 apt install -y binutils build-essential sysstat strace 
 
 set -x
