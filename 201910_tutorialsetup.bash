@@ -2,12 +2,12 @@
 
 
 echo "#########################"
-echo package update & install
+echo "package update & install"
 echo "#########################"
 
 
 apt update
-apt install -y binutils build-essential sysstat strace 
+apt install -y binutils build-essential sysstat strace python3
 
 echo "#########################"
 echo setup sysstat
