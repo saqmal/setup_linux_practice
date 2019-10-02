@@ -5,23 +5,22 @@ echo "#########################"
 echo package update & install
 echo "#########################"
 
-set +x 
 
 apt update
 apt install -y binutils build-essential sysstat strace 
-
-set -x
 
 echo "#########################"
 echo setup sysstat
 echo "#########################"
 
-set +x 
-
 sed -i s/'ENABLED="false"'/'ENABLED="true"'/g /etc/default/sysstat
 service sysstat start
 
-set -x
+echo "#########################"
+echo change timezone to Tokyo
+echo "#########################"
+
+ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 echo "#########################"
 echo clone cutorial
