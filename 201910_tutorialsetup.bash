@@ -1,20 +1,20 @@
 #!/bin/bash
 
 
-echo #########################
+echo "#########################"
 echo package update & install
-echo #########################
+echo "#########################"
 
 set +x 
 
 apt upgrade
-apt install -y binutils build-esssential sysstat strace 
+apt install -y binutils build-essential sysstat strace 
 
 set -x
 
-echo #########################
+echo "#########################"
 echo setup sysstat
-echo #########################
+echo "#########################"
 
 set +x 
 
@@ -23,13 +23,12 @@ service sysstat start
 
 set -x
 
-echo #########################
+echo "#########################"
 echo clone cutorial
-echo #########################
+echo "#########################"
 
 set +x 
 
-cd ../
 git clone https://github.com/satoru-takeuchi/linux-in-practice/
 
 
