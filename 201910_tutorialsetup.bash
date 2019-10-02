@@ -7,6 +7,7 @@ echo "#########################"
 
 
 apt update
+apt upgrade
 apt install -y binutils build-essential sysstat strace python3
 
 echo "#########################"
